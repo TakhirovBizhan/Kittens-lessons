@@ -1,54 +1,56 @@
-# React + TypeScript + Vite
+# Обучающий репозиторий
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Тут будет немного практики для вас новички.
 
-Currently, two official plugins are available:
+## Ваши задачи
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Тут находится проект который мы с вами рассматривали на паре.
 
-## Expanding the ESLint configuration
+Необходимо сделать следующее:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1. Создать новую ветку, можете назвать ее своим именем.
+2. Убрать лишние файлы и лишний код.
+3. Создать отдельный компонент, карточку, в которой вы отобразите данные приходящие с сервера. Стилизовать карточку можете на свое усмотрение, главное чтоб она соотвествовала хоть каким то правилам эстетики. Для стилизации используйте css модули.
+4. Необходимо создать еще одну ветку, которую нужно назвать `name-tutorial` где вместо name будет ваше имя.
+5. На этой ветке вы должны выполнить туториал по реакту.
+6. Необходимо прочесть теорию, которую я приклеплю в ресурсах.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Ссылки на ресурсы
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+react tutorial: https://react.dev/learn/tutorial-tic-tac-toe
+css modules(до 12 минуты): https://www.youtube.com/watch?v=oYnyQ47BUSo&t=107s
+шпаргалка по git: https://abatickaya.medium.com/%D1%88%D0%BF%D0%B0%D1%80%D0%B3%D0%B0%D0%BB%D0%BA%D0%B0-%D0%BF%D0%BE-git-55eeea487676
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Теория
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+Fetch: https://doka.guide/js/fetch
+Асинхронность в JavaScript: https://doka.guide/js/async-in-js/
+typescript: https://doka.guide/tools/static-types/
+Что такое API: https://doka.guide/tools/api/
+ООП: https://doka.guide/tools/oop/
+Реактивность: https://doka.guide/tools/reactivity/
+
+## Установка и запуск
+
+1. Клонируйте репозиторий:
+   ```sh
+   git clone https://github.com/TakhirovBizhan/Kittens-lessons.git
+   ```
+2. Перейдите в папку проекта:
+   ```sh
+   cd Kittens-lessons
+   ```
+3. Установите зависимости:
+   ```sh
+   npm install
+   ```
+4. Запустите проект:
+   ```sh
+   npm run dev
+   ```
+
+## API и запросы
+
+основной запрос: https://api.escuelajs.co/api/v1/products
+
+Mock api: https://fakeapi.platzi.com/
