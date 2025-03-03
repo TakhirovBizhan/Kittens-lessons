@@ -23,12 +23,12 @@ css modules(до 12 минуты): https://www.youtube.com/watch?v=oYnyQ47BUSo&t
 
 ## Теория
 
-Fetch: https://doka.guide/js/fetch
-Асинхронность в JavaScript: https://doka.guide/js/async-in-js/
-typescript: https://doka.guide/tools/static-types/
-Что такое API: https://doka.guide/tools/api/
-ООП: https://doka.guide/tools/oop/
-Реактивность: https://doka.guide/tools/reactivity/
+1. Fetch: https://doka.guide/js/fetch
+2. Асинхронность в JavaScript: https://doka.guide/js/async-in-js/
+3. typescript: https://doka.guide/tools/static-types/
+4. Что такое API: https://doka.guide/tools/api/
+5. ООП: https://doka.guide/tools/oop/
+6. Реактивность: https://doka.guide/tools/reactivity/
 
 ## Установка и запуск
 
