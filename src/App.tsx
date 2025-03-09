@@ -1,5 +1,3 @@
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
 import { useEffect, useState } from "react";
 
@@ -44,32 +42,17 @@ function App() {
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setButtonState(buttonState + 1)}>
-          {buttonState}
-        </button>
         {products?.map((product) => (
-          <>
-            <p>HEllo</p>
-            <p key={product.id}>{product.description}</p>
-          </>
+          <div key = {product.id}>
+            <h3>{product.title}</h3>
+            <img src={product.images[0]} alt={product.title} className="cardImage"></img>
+            <p>Description: </p>
+            <p>{product.description}</p>
+            <p style={{fontSize: 14}}>Price: {product.price}$</p>
+          </div>
         ))}
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   );
 }
