@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import styles from './card.module.css';
 
 interface IProduct {
   id: number;
@@ -17,7 +18,7 @@ const Card = () => {
     fetch('https://api.escuelajs.co/api/v1/products')
       .then((response) => {
         if (!response.ok) {
-          throw new Error('Данные с сервера не палучит');
+          throw new Error('Данные с сервера не получены');
         }
         return response.json();
       })
@@ -31,20 +32,20 @@ const Card = () => {
       });
   }, []);
 
-  if (loading) return <p>Загрузка...</p>;
-  if (error) return <p>Ошибка: {error}</p>;
-  if (products.length === 0) return <p>Нет данных</p>;
+  if (loading) return <p className={styles.loading}>Загрузка...</p>;
+  if (error) return <p className={styles.error}>Ошибка: {error}</p>;
+  if (products.length === 0) return <p className={styles.noData}>Нет данных</p>;
 
   return (
-    <div>
-      <h1>Список товаров</h1>
-      <div className="product_list">
+    <div className={styles.container}>
+      <h1 className={styles.title}>Список товаров</h1>
+      <div className={styles.productList}>
         {products.map((product) => (
-          <div key={product.id} className="product_card">
-            <h2>{product.title}</h2>
-            <p>{product.description}</p>
-            <p>Цена: {product.price} руб.</p>
-            <img src={product.images[0]} alt={product.title} />
+          <div key={product.id} className={styles.productCard}>
+            <h2 className={styles.productTitle}>{product.title}</h2>
+            <p className={styles.productDescription}>{product.description}</p>
+            <p className={styles.productPrice}>Цена: {product.price} руб.</p>
+            <img className={styles.productImage} src={product.images[0]} alt={product.title} />
           </div>
         ))}
       </div>
