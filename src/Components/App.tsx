@@ -1,10 +1,10 @@
-import Card from './card'; 
+import CardList from "./CardList";
 
 const App = () => {
   return (
     <section>
       <div>
-      <Card />  {}
+        <CardList />
       </div>
     </section>
   );
