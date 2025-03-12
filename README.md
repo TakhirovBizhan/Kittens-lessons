@@ -38,7 +38,7 @@ loading = boolean
 1. Пример реализации тем: https://github.com/TakhirovBizhan/e-commerse-kts/tree/main/src/hooks/useThemes
 2. Пример реализации кнопки: https://github.com/qalqaDevSpace/qalqa-ui/tree/main/src/components-lib/components/Button
 3. context: https://react.dev/learn/scaling-up-with-reducer-and-context
-
+4. Запрос для получения категорий: https://api.escuelajs.co/api/v1/categories
 
 # Теория
 
