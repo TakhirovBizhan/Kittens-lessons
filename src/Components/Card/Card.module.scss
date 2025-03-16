@@ -1,0 +1,46 @@
+@use '/src/Context/mixin.scss' as *;
+@use '/src/Context/theme.scss' as *;
+
+:root {
+  --shadow-color-dark: #4b4d4b;
+  --shadow-color-light: #cccccc;
+  font-size: 62.5%;
+}
+
+.productList {
+  margin: 4rem 8rem;
+  padding: 0 4rem;
+  display: flex;
+  align-items: center;
+  gap: 8rem;
+  max-width: 120rem;
+  overflow: scroll;
+  border: 2px solid var(--text-color);
+  border-radius: 2rem;
+  @include boxShadow(var(--shadow-color-dark));
+}
+
+.productList::-webkit-scrollbar {
+  display: none;
+}
+
+.cardImage {
+  width: 40rem;
+  height: 40rem;
+  border-radius: 2rem;
+  object-fit: cover;
+}
+ыы
+.theme-switcher {
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  background: #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+body.dark .theme-switcher {
+  background: #444;
+  color: #fff;
+}
