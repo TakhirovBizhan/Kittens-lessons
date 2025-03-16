@@ -1,5 +1,7 @@
-import { Card } from "./card/Card.tsx"
+import { Card } from "./Card.tsx"
 import { useEffect, useState } from "react";
+import { useTheme } from "../theme/ThemeContext.tsx";
+import "../AppStyle.scss"
 
 type TData = {
     id: number;
@@ -23,6 +25,7 @@ const CardList = () => {
     
  const [products, setProducts] = useState<TData[]>([]);
  const [categories, setCategories] = useState<TCategory[]>([]);
+ const { theme, toggleTheme } = useTheme();
 
  useEffect(() => {
     const getProducts = async () => {
@@ -53,15 +56,47 @@ const CardList = () => {
   console.log(categories);
 
 return (
-{products.map((product: TData) => (
+  <div className="App">
+  
+  <div className="header-container">
+  <button onClick={toggleTheme}>
+        {theme === "light" ? "Dark" : "Light"}
+  </button>
+  </div>
+
+  <div className="content-container">
+  <div className="products">
+  <h2>Products</h2>
+  {products.map((product) => (
+      <div className="cardItem">
+      <div className="card">
     <Card
       id = {product.id}
       title={product.title}
       description={product.description}
       price={product.price}
-      images={product.images}
+      images={product.images} 
+      
     />
+        </div>
+    </div>
   ))}
+  </div>
+
+  <div className="categories">
+  <h2>Categories</h2>
+    {categories.map((category) => (
+      <div className="cardItem" key={category.id}>
+        <Card
+          id={category.id}
+          title={category.name}
+          images={[category.image]}
+        />
+      </div>
+    ))}
+    </div>
+  </div>
+</div>
 );
 };
 
